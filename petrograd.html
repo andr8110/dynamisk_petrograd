@@ -60,21 +60,29 @@
         <!--forret row-->
         <div class="row ">
             <!--Forret 1-->
-            <div class="col-xs-12 col-sm-6 col-md-4 col-dm-4 ret">
-                <img src="imgs/medium/bochkarev-md.jpg" class="img-responsive">
-                <h4>Rettens navn:</h4>
-                <h5>Pris:</h5>
-                <p>Teaser på beskrivelse ...</p>
-                <button type="button" class="btn btn-primary modalknap col-xs-12 col-sm-3 col-md-3 col-lg-3 " data-toggle="modal" data-target="#myModal">
-                    Læs mere
-                </button>
-            </div>
 
+            <template id="produkt_template">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-dm-4 ret">
+                    <img src="imgs/medium/bochkarev-md.jpg" class="img-responsive data_billede">
+                    <h4 class="data_navn">DATA_NAVN</h4>
+                    <h5 class="pris"><span class="data_pris">DATA_PRIS</span>,-</h5>
+                    <h5 class="rabatpris"><span class="data_rabatpris">DATA_RABATPRIS</span>,-</h5>
+                    <!--skal kun vises hvis rabat-->
+                    <h5><span class="udsolgttekst">Denne ret er desværre udsolgt</span></h5>
+                    <!--skal kun vises hvis udsolgt-->
+
+                    <p>Teaser på beskrivelse ...</p>
+                    <button type="button" class="btn btn-primary modalknap col-xs-12 col-sm-3 col-md-3 col-lg-3 " data-toggle="modal" data-target="#myModal">
+                        Læs mere
+                    </button>
+                </div>
+            </template>
             <!--Forret 2-->
             <div class="col-xs-12 col-sm-6 col-md-4 col-dm-4 ret">
                 <img src="imgs/medium/bochkarev-md.jpg" class="img-responsive">
                 <h4>Rettens navn:</h4>
-                <h5>Pris:</h5>
+                <h5 class="udsolgt">Pris:</h5>
+                <h5><span class="udsolgttekst">Denne ret er desværre udsolgt</span></h5>
                 <p>Teaser på beskrivelse ...</p>
                 <button type="button" class="btn btn-primary modalknap col-xs-12 col-sm-3 col-md-3 col-lg-3" data-toggle="modal" data-target="#myModal">
                     Læs mere
@@ -85,7 +93,8 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-dm-4 ret">
                 <img src="imgs/medium/bochkarev-md.jpg" class="img-responsive">
                 <h4>Rettens navn:</h4>
-                <h5>Pris:</h5>
+                <h5 class="rabat">Pris:</h5>
+                <h5 class="rabatpris">Pris:</h5>
                 <p>Teaser på beskrivelse ...</p>
                 <button type="button" class="btn btn-primary modalknap col-xs-12 col-sm-3 col-md-3 col-lg-3" data-toggle="modal" data-target="#myModal">
                     Læs mere
